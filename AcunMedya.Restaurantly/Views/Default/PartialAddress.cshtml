@@ -1,0 +1,47 @@
+﻿
+<div class="container" data-aos="fade-up">
+
+    <div class="row mt-5">
+       
+        <div class="col-lg-4">
+            <div class="info">
+                <div class="address">
+                    <i class="bi bi-geo-alt"></i>
+                    <h4>Konum:</h4>
+                    <p>@ViewBag.Location</p>
+                </div>
+
+                <div class="open-hours">
+                    <i class="bi bi-clock"></i>
+                    <h4>Açık Saatler:</h4>
+                    <p>
+                       @ViewBag.OpenHours
+                    </p>
+                </div>
+
+                <div class="Email">
+                    <i class="bi bi-envelope"></i>
+                    <h4>Email:</h4>
+                    <p>@ViewBag.Email</p>
+                </div>
+                <br />
+                <div class="Telefon">
+                    <i class="bi bi-phone"></i>
+                    <h4>Call:</h4>
+                    <p>@ViewBag.Call</p>
+                </div>
+
+            </div>
+
+        </div>
+      
+        @if (@ViewBag.Message != null)
+        {
+            <script>alert('@ViewBag.Message')</script>
+        }
+
+        @Html.Action("PartialContact", "Default")
+
+    </div>
+
+</div>

@@ -1,0 +1,52 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Special>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<section id="specials" class="specials">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Spesyallerimiz</h2>
+            <p>Spesyallerimize Göz Atın</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3">
+                <ul class="nav nav-tabs flex-column">
+                    @foreach (var special in Model)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link @(Model.IndexOf(special) == 0 ? "active show" : "")" data-bs-toggle="tab" href="#tab-@special.SpecialId">
+                                @special.Title
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    @foreach (var special in Model)
+                    {
+                        <div class="tab-pane @(Model.IndexOf(special) == 0 ? "active show" : "")" id="tab-@special.SpecialId">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>@special.Title</h3>
+                                    <p class="fst-italic">@special.ShortDescription</p>
+                                    <p>@special.FullDescription</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="@special.ImageUrl" alt="@special.Title" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
