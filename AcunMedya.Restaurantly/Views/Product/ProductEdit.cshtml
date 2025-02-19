@@ -1,0 +1,51 @@
+﻿@model  AcunMedya.Restaurantly.Entities.Product
+@{
+    ViewBag.Title = "ProductEdit";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Ürün Ekleme</a></li>
+        </ol>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Ürün Ekleme Formu</h4>
+                <div class="basic-form">
+                    <form method="post">
+
+                        <div class="form-group">
+                            @Html.HiddenFor(x=>x.ProductId)
+                            <label>Ürün İsmi</label>
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+                            <label>Fiyatı </label>
+                            @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
+                            <label>Açıklama</label>
+                            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+
+                            <label>Resmi</label>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+                            <label>Kategori İsmi</label>
+                            @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.v, new { @class = "form-control" })
+
+
+                        </div>
+
+                        <button type="submit" class="btn btn-dark gradient-2">Ürün Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@model  AcunMedya.Restaurantly.Entities.Admin
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Anasayfa</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Profil</a></li>
+        </ol>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Profil Sayfası</h4>
+                <div class="basic-form">
+                    <form method="post">
+
+                        <div class="form-group">
+                            @Html.HiddenFor(x => x.AdminId)
+                            <label>İsim</label>
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+                            <label> Soy İsim</label>
+                            @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+
+                            <label>Kullanıcı Adı</label>
+                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+
+
+                            <label>Email </label>
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+
+                            <label>Resmi</label>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+                            <label>Şifre</label>
+                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+
+                           
+
+
+                        </div>
+
+                        <button type="submit" class="btn btn-dark gradient-2">Profili Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
