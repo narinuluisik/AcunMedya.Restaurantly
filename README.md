@@ -1,6 +1,6 @@
 # AcunMedya.Restaurantly
 
-AcunMedya.Restaurantly, restoran yönetimi için geliştirilmiş bir web uygulamasıdır. Bu uygulama, restoranların online menülerini yönetmelerini, sipariş alımlarını takip etmelerini ve admin paneli üzerinden işlemleri kolayca gerçekleştirmelerini sağlar. Proje, C# ASP.NET Framework kullanılarak geliştirilmiştir ve SQL Server veritabanı ile entegre edilmiştir.
+-Bu projede, kullanıcıların restoranın menüsüne göz atabileceği, sipariş verebileceği, etkinliklere katılabileceği ve rezervasyon yapabileceği bir Restoran Web Sitesi oluşturulmuştur. Ayrıca, restoran yöneticileri, admin paneli üzerinden Menüler, Etkinlikler, Hizmetler ve Spesiyaller gibi öğeleri yönetebilecektir. bunuda
 
 ## Özellikler
 
@@ -19,6 +19,7 @@ AcunMedya.Restaurantly, restoran yönetimi için geliştirilmiş bir web uygulam
 - **Yetkilendirme ve Kimlik Doğrulama**
 
 ## Ekran Görüntüleri
+
 ### Restoran Ana Sayfası
 ![Ekran görüntüsü 2025-02-26 231213](https://github.com/user-attachments/assets/b5cf1932-70e2-49ee-bad1-7c3088cc3d42)
 
