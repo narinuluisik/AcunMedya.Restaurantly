@@ -4,11 +4,11 @@
 
 ## Özellikler
 
-- **Admin Paneli**: Restoran yöneticileri, menü öğelerini, siparişleri, kullanıcıları ve daha fazlasını yönetebilir.
-- **Restoran Sitesi**: Kullanıcılar, restoranın menüsüne göz atabilir, sipariş verebilir ve restoran hakkında bilgi alabilir.
-- **Kimlik Doğrulama ve Yetkilendirme**: Kullanıcılar giriş yaparak hesaplarına erişebilir. Admin paneline sadece yetkili kullanıcılar giriş yapabilir.
-- **Session & Cookie Yönetimi**: Kullanıcı oturumları ve çerezler yönetilerek, kullanıcı deneyimi iyileştirilmiştir.
-- **Code First Yaklaşımı**: SQL Server ile bağlantı kurularak, veritabanı modelleme Code First yaklaşımı ile yapılmıştır.
+- **Admin Paneli**🖥️:: Restoran yöneticileri, menü öğelerini, siparişleri, kullanıcıları ve daha fazlasını yönetebilir.
+- **Restoran Sitesi**🌐: Kullanıcılar, restoranın menüsüne göz atabilir, sipariş verebilir ve restoran hakkında bilgi alabilir.
+- **Kimlik Doğrulama ve Yetkilendirme**🔑: Kullanıcılar giriş yaparak hesaplarına erişebilir. Admin paneline sadece yetkili kullanıcılar giriş yapabilir.
+- **Session & Cookie Yönetimi**🍪: Kullanıcı oturumları ve çerezler yönetilerek, kullanıcı deneyimi iyileştirilmiştir.
+- **Code First Yaklaşımı**💻: SQL Server ile bağlantı kurularak, veritabanı modelleme Code First yaklaşımı ile yapılmıştır.
 
 ## Teknolojiler
 
@@ -18,7 +18,7 @@
 - **Session & Cookie Yönetimi**
 - **Yetkilendirme ve Kimlik Doğrulama**
 
-## Ekran Görüntüleri
+## Ekran Görüntüleri 📸
 
 ### Restoran Ana Sayfası
 ![Ekran görüntüsü 2025-02-26 231213](https://github.com/user-attachments/assets/b5cf1932-70e2-49ee-bad1-7c3088cc3d42)
