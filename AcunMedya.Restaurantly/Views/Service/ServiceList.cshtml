@@ -1,0 +1,66 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Service>
+
+@{
+    ViewBag.Title = "ServiceList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+        </ol>
+    </div>
+</div>
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- /# column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Hizmetlerimiz  </h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in Model)
+                                {
+                                    <tr>
+                                        <td>@x.ServiceId</td>
+                                        <td>@x.Title</td>
+                                        <td>@x.Description</td>
+
+                                        <td><a href="/Service/ServiceDelete/@x.ServiceId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Service/ServiceEdit/@x.ServiceId" class="btn btn-info">Güncelle</a></td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <td><a href="/Service/ServiceCreate/" class="btn btn-success">Hizmet Ekle</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+
+    </div>
+</div>

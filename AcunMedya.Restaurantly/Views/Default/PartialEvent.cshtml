@@ -1,0 +1,39 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Event>
+
+<section id="events" class="events">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Etkinlikler</h2>
+            <p>Restoranımızda etkinliklerinizi düzenleyin</p>
+        </div>
+
+        <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                @foreach (var eventItem in Model)
+                {
+                    <div class="swiper-slide">
+                        <div class="row event-item">
+                            <div class="col-lg-6">
+                                <img src="@eventItem.ImageUrl" class="img-fluid" alt="@eventItem.Title">
+                            </div>
+                            <div class="col-lg-6 pt-4 pt-lg-0 content">
+                                <h3>@eventItem.Title</h3>
+                                <div class="price">
+                                    <p><span>@eventItem.Price ₺</span></p>
+                                </div>
+
+                                <ul>
+                                    @foreach (var desc in eventItem.Description.Split('\n'))
+                                    {
+                                        <li><i class="bi bi-check-circle-fill"></i> @desc.Trim()</li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- End event item -->
+                }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>

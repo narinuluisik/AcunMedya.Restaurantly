@@ -16,6 +16,7 @@ namespace AcunMedya.Restaurantly.Entities
         [StringLength(250)]
         public string Message { get; set; }
         public bool IsRead { get; set; }
+        public bool IsDeleted { get; set; }
         public DateTime SendDate { get; set; }
     }
 }

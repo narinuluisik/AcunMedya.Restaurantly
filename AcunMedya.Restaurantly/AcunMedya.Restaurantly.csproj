@@ -130,20 +130,31 @@
     <Compile Include="Context\RestaurantlyContext.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SpecialController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Controllers\İstatistikController.cs" />
     <Compile Include="Entities\About.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\Adress.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Chef.cs" />
     <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Feature.cs" />
+    <Compile Include="Entities\Gallery.cs" />
     <Compile Include="Entities\Notification.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Reservation.cs" />
@@ -173,6 +184,18 @@
     <Compile Include="Migrations\202502191814540_mig4.designer.cs">
       <DependentUpon>202502191814540_mig4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202502192033442_mig_event_add.cs" />
+    <Compile Include="Migrations\202502192033442_mig_event_add.designer.cs">
+      <DependentUpon>202502192033442_mig_event_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502192125489_add_gallary.cs" />
+    <Compile Include="Migrations\202502192125489_add_gallary.designer.cs">
+      <DependentUpon>202502192125489_add_gallary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202502201640527_AddIsDeletedToContact.cs" />
+    <Compile Include="Migrations\202502201640527_AddIsDeletedToContact.designer.cs">
+      <DependentUpon>202502201640527_AddIsDeletedToContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -198,6 +221,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\check-mark %281%29.png" />
     <Content Include="Template\colorlib-error-404-12\css\style.css" />
     <Content Include="Template\colorlib-error-404-12\img\emoji.png" />
     <Content Include="Template\colorlib-error-404-12\index.html" />
@@ -611,6 +635,8 @@
     <Content Include="Template\quixlab-master\images\logo-text.png" />
     <Content Include="Template\quixlab-master\images\logo-white.png" />
     <Content Include="Template\quixlab-master\images\logo.png" />
+    <Content Include="Template\quixlab-master\images\logoo.png" />
+    <Content Include="Template\quixlab-master\images\main-logo.png" />
     <Content Include="Template\quixlab-master\images\media\media-1.png" />
     <Content Include="Template\quixlab-master\images\media\media-2.png" />
     <Content Include="Template\quixlab-master\images\media\media-3.png" />
@@ -642,6 +668,8 @@
     <Content Include="Template\quixlab-master\images\profile\9.jpg" />
     <Content Include="Template\quixlab-master\images\profile\cover.jpg" />
     <Content Include="Template\quixlab-master\images\profile\profile.png" />
+    <Content Include="Template\quixlab-master\images\rest.png" />
+    <Content Include="Template\quixlab-master\images\restaurantly_logo.png" />
     <Content Include="Template\quixlab-master\images\users\1.jpg" />
     <Content Include="Template\quixlab-master\images\users\2.jpg" />
     <Content Include="Template\quixlab-master\images\users\3.jpg" />
@@ -5687,9 +5715,40 @@
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Dashboard\RezervasionPartial.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Default\PartialEvent.cshtml" />
+    <Content Include="Views\Default\PartialGallery.cshtml" />
+    <Content Include="Views\Dashboard\ChefPartial.cshtml" />
+    <Content Include="Views\İstatistik\Index.cshtml" />
+    <Content Include="Views\AdminLayout\PartialContact.cshtml" />
+    <Content Include="Views\Special\SpecialList.cshtml" />
+    <Content Include="Views\Special\SpecialCreate.cshtml" />
+    <Content Include="Views\Special\SpecialEdit.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\Trash.cshtml" />
+    <Content Include="Views\Event\EventList.cshtml" />
+    <Content Include="Views\Event\EventCreate.cshtml" />
+    <Content Include="Views\Event\EventEdit.cshtml" />
+    <Content Include="Views\Service\ServiceList.cshtml" />
+    <Content Include="Views\Service\ServiceCreate.cshtml" />
+    <Content Include="Views\Service\ServiceEdit.cshtml" />
+    <Content Include="Views\Gallery\GalleryList.cshtml" />
+    <Content Include="Views\Gallery\GalleryCreate.cshtml" />
+    <Content Include="Views\Gallery\GalleryEdit.cshtml" />
+    <Content Include="Views\Reservation\ReservationList.cshtml" />
+    <Content Include="Views\Reservation\ReservationCreate.cshtml" />
+    <Content Include="Views\Reservation\ReservationEdit.cshtml" />
+    <Content Include="Views\Testimonial\TestimonialList.cshtml" />
+    <Content Include="Views\Testimonial\TestimonialCreate.cshtml" />
+    <Content Include="Views\Testimonial\TestimonialEdit.cshtml" />
+    <Content Include="Views\Chef\ChefList.cshtml" />
+    <Content Include="Views\Chef\ChefCreate.cshtml" />
+    <Content Include="Views\Chef\ChefEdit.cshtml" />
+    <Content Include="Template\quixlab-master\images\logo2.webp" />
+    <Content Include="Views\Profile\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -5720,6 +5779,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202502191814540_mig4.resx">
       <DependentUpon>202502191814540_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502192033442_mig_event_add.resx">
+      <DependentUpon>202502192033442_mig_event_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502192125489_add_gallary.resx">
+      <DependentUpon>202502192125489_add_gallary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202502201640527_AddIsDeletedToContact.resx">
+      <DependentUpon>202502201640527_AddIsDeletedToContact.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

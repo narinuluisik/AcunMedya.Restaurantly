@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace AcunMedya.Restaurantly.Controllers
 {
+   
     public class AdminLayoutController : Controller
     {
         RestaurantlyContext Db = new RestaurantlyContext();
@@ -45,5 +47,24 @@ namespace AcunMedya.Restaurantly.Controllers
             Db.SaveChanges();
             return RedirectToAction("ProductList", "Product");
         }
+
+        public PartialViewResult PartialContact()
+        {
+            ViewBag.messageIsReadByFalseCount = Db.Contacts.Where(x => x.IsRead == false).Count();
+            var values = Db.Contacts.Where(x => x.IsRead == false).ToList();
+            return PartialView(values);
+        }
+
+        public ActionResult ContactStatusChangeToTrue(int id)
+        {
+            var value = Db.Contacts.Find(id);
+            value.IsRead = true;
+            Db.SaveChanges();
+            return RedirectToAction("Index", "Dashboard");
+        }
+
+     
+
+
     }
 }

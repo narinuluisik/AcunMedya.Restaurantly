@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AcunMedya.Restaurantly.Controllers
 {
+    [Authorize]
     public class DashboardController : Controller
     {
 
@@ -27,5 +28,22 @@ namespace AcunMedya.Restaurantly.Controllers
             return PartialView(value);
 
         }
+    
+        public PartialViewResult ChefPartial()
+        {
+            var value = Db.Chefs.ToList();
+            return PartialView(value);
+        }
+        public ActionResult ChangeReservationStatus(int id, string status)
+        {
+            var reservation = Db.Reservations.Find(id);
+            if (reservation != null)
+            {
+                reservation.ReservationStatus = status;
+                Db.SaveChanges();
+            }
+            return RedirectToAction("Index"); // Listeyi tekrar yükle
+        }
+
     }
 }

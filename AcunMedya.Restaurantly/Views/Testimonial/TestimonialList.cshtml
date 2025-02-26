@@ -1,0 +1,81 @@
+﻿
+@model List<AcunMedya.Restaurantly.Entities.Testimonial>
+
+
+
+@{
+    ViewBag.Title = "TestimonialList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+        </ol>
+    </div>
+</div>
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- /# column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Referanslarım  </h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>İsim</th>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Resim</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in Model)
+                                {
+                                  
+                                    <tr>
+                                     
+                                        <td>@x.TestimonialId</td>
+                                        <td>@x.Name</td>
+                                        <td>@x.Title</td>
+                                        <td>@x.Description</td>
+     
+                                        <td><img src="@x.ImageUrl" style=" width:100px; height:100px" /></td>
+
+                                        <td>
+                                            <a href="/Testimonial/TestimonialDelete/@x.TestimonialId" class="btn btn-danger">
+                                                <i class="fa fa-close color-muted m-r-5"></i>
+                                                Sil
+                                            </a>
+                                        </td>
+
+                                        <td><a href="/Testimonial/TestimonialEdit/@x.TestimonialId" class="btn btn-info">Güncelle</a></td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <td><a href="/Testimonial/TestimonialCreate/" class="btn btn-success">Referans Ekle</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+
+    </div>
+</div>

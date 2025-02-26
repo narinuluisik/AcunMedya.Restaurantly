@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace AcunMedya.Restaurantly.Controllers
 {
+    [Authorize]
     public class ProductController : Controller
     {
         RestaurantlyContext Db = new RestaurantlyContext();
@@ -19,9 +20,14 @@ namespace AcunMedya.Restaurantly.Controllers
             return View(value);
         }
      
-        public ActionResult ProductList()
+        public ActionResult ProductList(string searchText)
         {
-
+            List<Product> values;
+            if(searchText!=null)
+            {
+                values = Db.Products.Where(x => x.Name.Contains(searchText)).ToList();
+                return View(values);
+            }
             var value = Db.Products.ToList();
             return View(value);
         }

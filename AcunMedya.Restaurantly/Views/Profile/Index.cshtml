@@ -21,32 +21,43 @@
             <div class="card-body">
                 <h4 class="card-title">Profil Sayfası</h4>
                 <div class="basic-form">
-                    <form method="post">
+                    <form method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            @Html.HiddenFor(x => x.AdminId)
-                            <label>İsim</label>
-                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
 
-                            <label> Soy İsim</label>
-                            @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+                            <input type="hidden" name="AdminId" value="@Model.AdminId" />
+                            <label>İsim</label>
+                            <input type="text" name="Name" value="@Model.Name" class="form-control" />
+
+                            <label>Soy İsim</label>
+                            <input type="text" name="SurName" value="@Model.SurName" class="form-control" />
 
                             <label>Kullanıcı Adı</label>
-                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                            <input type="text" name="UserName" value="@Model.UserName" class="form-control" />
 
 
-                            <label>Email </label>
-                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                            <label>Email</label>
+                            <input type="text" name="Email" value="@Model.Email" class="form-control" />
 
-                            <label>Resmi</label>
-                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+                            <label>Resim</label>
+                            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                            {
+                                <div class="mt-2">
+                                    <p>Mevcut Resim</p>
+                                    <img src="@Model.ImageUrl" style="width:100px; height:100px;" class="img-thumbnail" />
+                                </div>
+                            }
+                            <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
+
+                            <label>Resim Yükle </label>
+                            <input type="file" name="ImageFile" value="@Model.ImageFile" class="form-control" />
 
                             <label>Şifre</label>
-                            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
-
-                           
-
-
+                            <input type="text" name="Password" class="form-control" />
+                            <p>
+                                @Html.ValidationSummary()
+                            </p>
                         </div>
 
                         <button type="submit" class="btn btn-dark gradient-2">Profili Kaydet</button>

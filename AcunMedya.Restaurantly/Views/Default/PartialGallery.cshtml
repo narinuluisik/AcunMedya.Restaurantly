@@ -1,0 +1,29 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Gallery>
+
+<section id="gallery" class="gallery">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Galeri</h2>
+            <p>Restoranımızdan bazı fotoğraflar</p>
+        </div>
+    </div>
+
+    <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-0">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-md-4">
+                    <div class="gallery-item">
+                        <a href="@item.ImageUrl" class="gallery-lightbox" data-gall="gallery-item">
+                            <img src="@item.ImageUrl" alt="@item.Title" class="img-fluid">
+                        </a>
+                        <div class="gallery-info text-center mt-2">
+                            <h5>@item.Title</h5>
+                            <p>@item.Time.ToString("dd MMMM yyyy")</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

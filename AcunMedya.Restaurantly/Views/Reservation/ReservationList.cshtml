@@ -1,0 +1,98 @@
+﻿
+@model List<AcunMedya.Restaurantly.Entities.Reservation>
+
+
+
+@{
+    ViewBag.Title = "ReservationList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+        </ol>
+    </div>
+</div>
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- /# column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Rezervasyonlar  </h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Adı</th>
+                                    <th>Mail</th>
+                                    <th>Telefon</th>
+                                    <th>Açıklama</th>
+                                    <th>Tarih</th>
+                                    <th>Saat</th>
+                                    <th>Misafir Sayısı</th>
+                                    <th>Rezervasyon Durumu</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in Model)
+                                {
+                                   
+                                <tr>
+                                    <td>@x.ReservationId</td>
+                                    <td>@x.Name</td>
+                                    <td>@x.Email</td>
+                                    <td>@x.Phone</td>
+                                    <td>@x.Description</td>
+                                    <td>@x.ReservationDate.ToShortDateString()</td>
+                                    <td>@x.Time</td>
+                                    <td>@x.GuestCount</td>
+                                   
+                                        @if (x.ReservationStatus == "Beklemede")
+                                        {
+                                        <th><i class="fa fa-circle-o text-info  mr-2"></i> Beklemede</th>
+                                    }
+                                        @if (x.ReservationStatus == "Onaylandı")
+                                        {
+                                            <th><i class="fa fa-circle-o text-success  mr-2"></i> Onaylandı</th>
+                                        }
+                                        @if (x.ReservationStatus == "İptal Edildi")
+                                        {
+                                            <th><i class="fa fa-circle-o text-danger  mr-2"></i> Reddedildi</th>
+
+                                        }
+                                        <td>
+                                            <a href="/Reservation/ReservationtDelete/@x.ReservationId" class="btn btn-danger">
+                                                <i class="fa fa-close color-muted m-r-5"></i>
+                                                Sil
+                                            </a>
+                                        </td>
+
+                                        <td><a href="/Reservation/ReservationEdit/@x.ReservationId" class="btn btn-info">Güncelle</a></td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <td><a href="/Reservation/ReservationCreate/" class="btn btn-success">Rezervasyon Ekle</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+
+    </div>
+</div>

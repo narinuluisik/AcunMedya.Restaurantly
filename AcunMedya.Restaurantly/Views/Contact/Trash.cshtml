@@ -1,0 +1,59 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Contact>
+@{
+    ViewBag.Title = "Trash";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="email-left-box">
+                        <a href="email-compose.html" class="btn btn-primary btn-block">Çöp Kutusu</a>
+                        <div class="mail-list mt-4">
+                            <a href="/Contact/Index/" class="list-group-item border-0 text-primary p-r-0">
+                                <i class="fa fa-inbox font-18 align-middle mr-2"></i>
+                                <b>Gelen Kutusu</b>
+                                <span class="badge badge-primary badge-sm float-right m-t-5">@ViewBag.gelenmessagecount</span>
+                            </a>
+                            <a href="/Contact/Trash/" class="list-group-item border-0 p-r-0">
+                                <i class="fa fa-trash font-18 align-middle mr-2"></i>Çöp Kutusu
+                            </a>
+                        </div>
+                    </div>
+
+                    <br /><br />
+
+                    <div class="email-right-box">
+                        <div role="toolbar" class="toolbar">
+                            <div class="btn-group"></div>
+                        </div>
+                        <div class="email-list m-t-15">
+                            @foreach (var item in Model)
+                            {
+                                <div class="message d-flex justify-content-between align-items-center p-2 border-bottom">
+                                    <a href="email-read.html" class="flex-grow-1 text-decoration-none text-dark d-flex align-items-center">
+                                        <div class="email-checkbox mr-2">
+                                            <input type="checkbox" id="chk@item.ContactId">
+                                            <label class="toggle" for="chk@item.ContactId"></label>
+                                        </div>
+                                        <span class="star-toggle ti-star mr-2"></span>
+                                        <strong class="mr-2">@item.Email</strong>
+                                        <span class="text-truncate">@item.Message</span>
+                                    </a>
+                                    <div class="d-flex align-items-center">
+                                        <span class="date text-muted mr-3">@item.SendDate.ToString("dd.MM.yyyy")</span>
+                                     
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div> <!-- email-right-box -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+e>

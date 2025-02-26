@@ -1,0 +1,34 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Contact>
+<li class="icons dropdown">
+    <a href="javascript:void(0)" data-toggle="dropdown">
+        <i class="mdi mdi-email-outline"></i>
+        <span class="badge gradient-1 badge-pill badge-primary">@ViewBag.messageIsReadByFalseCount</span>
+    </a>
+    <div class="drop-down animated fadeIn dropdown-menu">
+        <div class="dropdown-content-heading d-flex justify-content-between">
+            <span class="">@ViewBag.messageIsReadByFalseCount Yeni Mesaj Var</span>
+
+        </div>
+        <div class="dropdown-content-body">
+            <ul>
+                @foreach (var item in Model)
+                {
+                <li class="notification-unread">
+                    <a href="/AdminLayout/ContactStatusChangeToTrue/@item.ContactId">
+                        <img class="float-left mr-3 avatar-img" src="~/Template/check-mark (1).png" style="height:40px; width:40px" />
+                        <div class="notification-content">
+                            <div class="notification-heading">@item.Name</div>
+                            <div class="notification-timestamp">@(((DateTime)item.SendDate).ToString("dd.MM.yyyy"))</div>
+                            <div class="notification-text">
+                                @item.Message
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+
+            </ul>
+
+        </div>
+    </div>
+</li>

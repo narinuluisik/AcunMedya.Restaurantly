@@ -13,47 +13,36 @@
                                 <th>Telefon</th>
                                 <th>Açıklaması</th>
                                 <th>Durumu</th>
-                                <th>Detaylae</th>
+                                <th>Detaylar</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
-
-
                                 <tr>
                                     <td>@item.Name</td>
                                     <td>@item.Email</td>
+                                    <td><span>@item.Phone</span></td>
+                                    <td>@item.Description</td>
+
                                     <td>
-                                        <span>@item.Phone</span>
+                                        <a href="/Dashboard/ChangeReservationStatus/@item.ReservationId?status=Beklemede">
+                                            <i class="fa @(item.ReservationStatus == "Beklemede" ? "fa-circle text-info" : "fa-circle-o text-info") mr-2"></i>Beklemede
+                                        </a>
+                                        <a href="/Dashboard/ChangeReservationStatus/@item.ReservationId?status=Onaylandı">
+                                            <i class="fa @(item.ReservationStatus == "Onaylandı" ? "fa-circle text-success" : "fa-circle-o text-success") mr-2"></i>Onaylandı
+                                        </a>
+                                        <a href="/Dashboard/ChangeReservationStatus/@item.ReservationId?status=İptal Edildi">
+                                            <i class="fa @(item.ReservationStatus == "İptal Edildi" ? "fa-circle text-danger" : "fa-circle-o text-danger") mr-2"></i>Reddedildi
+                                        </a>
                                     </td>
+
                                     <td>
-                                        @item.Description
-                                    </td>
-
-                                    @if (item.ReservationStatus == "Beklemede")
-                                    {
-                                        <td> <i class="fa fa-circle-o text-info mr-2"></i> Beklemede</td>
-                                    }
-
-                                    @if (item.ReservationStatus == "Onaylandı")
-                                    {
-                                        <td> <i class="fa fa-circle-o text-success mr-2"></i> Onaylandı</td>
-                                    }
-                                    @if (item.ReservationStatus == "İptal Edildi")
-                                    {
-                                        <td> <i class="fa fa-circle-o text-danger mr-2"></i> Reddedildi</td>
-                                    }
-
-                                   
-                                    <td>
-                                        <a class="btn btn-outline-info">Detaylar</a>
+                                        <a href="/Dashboard/RezervasionDetailsPartial/@item.ReservationId" class="btn btn-outline-info">Detaylar</a>
                                     </td>
                                 </tr>
                             }
-
                         </tbody>
-
                     </table>
                 </div>
             </div>

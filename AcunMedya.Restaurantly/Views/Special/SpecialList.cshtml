@@ -1,0 +1,97 @@
+﻿@model List<AcunMedya.Restaurantly.Entities.Special>
+@{
+    ViewBag.Title = "SpecialList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- /# column -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Spesyallerimiz  </h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Başlık</th>
+                                    <th>Açıklama</th>
+                                    <th>Resim</th>
+                                    <th>Detaylar</th>
+                                    <th>Sil</th>
+                                    <th>Güncelle</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in Model)
+                                {
+                                 
+                                <tr>
+                                    <td>@x.SpecialId</td>
+                                    <td>@x.Title</td>
+                                    <td>@x.ShortDescription</td>
+
+                                    <td><img src="@x.ImageUrl" style=" width:100px; height:100px" /></td>
+
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-@x.SpecialId">
+                                            Detaylar
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="modal-@x.SpecialId" tabindex="-1" role="dialog" aria-labelledby="modalLabel-@x.SpecialId" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="modalLabel-@x.SpecialId">@x.Title - Detaylar</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>@x.FullDescription</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+
+
+
+
+                                    
+
+                                    <td>
+                                        <a href="/Special/SpecialDelete/@x.SpecialId" class="btn btn-danger">
+                                            <i class="fa fa-close color-muted m-r-5"></i>
+                                            Sil
+                                        </a>
+                                    </td>
+
+                                    <td><a href="/Special/SpecialEdit/@x.SpecialId" class="btn btn-info">Güncelle</a></td>
+
+                                </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <td><a href="/Special/SpecialCreate/" class="btn btn-success">Spesiyal Ekle</a></td>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /# column -->
+
+    </div>
+</div>
