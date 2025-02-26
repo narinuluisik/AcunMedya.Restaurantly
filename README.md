@@ -1,6 +1,6 @@
 # AcunMedya.Restaurantly
 
--Bu projede, kullanıcıların restoranın menüsüne göz atabileceği, sipariş verebileceği, etkinliklere katılabileceği ve rezervasyon yapabileceği bir Restoran Web Sitesi oluşturulmuştur. Ayrıca, restoran yöneticileri, admin paneli üzerinden Menüler, Etkinlikler, Hizmetler ve Spesiyaller gibi öğeleri yönetebilecektir. bunuda
+- Bu projede, kullanıcıların restoranın menüsüne göz atabileceği, sipariş verebileceği, etkinliklere katılabileceği ve rezervasyon yapabileceği bir Restoran Web Sitesi oluşturulmuştur. Ayrıca, restoran yöneticileri, admin paneli üzerinden Menüler, Etkinlikler, Hizmetler ve Spesiyaller gibi öğeleri yönetebilecektir. bunuda
 
 ## Özellikler
 
