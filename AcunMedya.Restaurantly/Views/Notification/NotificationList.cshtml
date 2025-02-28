@@ -1,8 +1,13 @@
-﻿@model List<AcunMedya.Restaurantly.Entities.Chef>
+﻿
+@model List<AcunMedya.Restaurantly.Entities.Notification>
+
+
 @{
-    ViewBag.Title = "ChefList";
+    ViewBag.Title = "NotificationList";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+
+
 
 <div class="row page-titles mx-0">
     <div class="col p-md-0">
@@ -12,7 +17,7 @@
         </ol>
     </div>
 </div>
-<!-- row -->
+
 
 <div class="container-fluid">
     <div class="row">
@@ -22,16 +27,16 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
-                        <h4>Şefler </h4>
+                        <h4>Bildirimler </h4>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>İsim</th>
                                     <th>Başlık</th>
-                                    <th>Resim</th>
+                                    <th>Zaman</th>
+                                    <th>İkon</th>
                                     <th>Sil</th>
                                     <th>Güncelle</th>
 
@@ -40,21 +45,22 @@
                             <tbody>
                                 @foreach (var x in Model)
                                 {
-                                <tr>
-                                    <th>@x.ChefId</th>
-                                    <td>@x.Name</td>
-                                    <td>@x.Title</td>
-                                    <td><img src="@x.ImageUrl" style=" width:100px; height:100px" /></td>
+                                    <tr>
+                                        <th>@x.NotificationId</th>
+                                        <td>@x.Title</td>
+                                        <td>@(((DateTime)x.Time).ToString("dd.MM.yyyy"))</td>
+                                        <td><i class="@x.Icon"></i></td>
 
-                                    <td><a href="/Chef/ChefDelete/@x.ChefId" class="btn btn-danger">Sil</a></td>
-                                    <td><a href="/Chef/ChefEdit/@x.ChefId" class="btn btn-info">Güncelle</a></td>
 
-                                </tr>
+                                      <td><a href="/Notification/NotificationDelete/@x.NotificationId" class="btn btn-danger">Sil</a></td>
+                                        <td><a href="/Notification/NotificationEdit/@x.NotificationId" class="btn btn-info">Güncelle</a></td>
+
+                                    </tr>
                                 }
 
                             </tbody>
                         </table>
-                        <td><a href="/Chef/ChefCreate/" class="btn btn-success">Şef Ekle</a></td>
+                        <td><a href="/Notification/NotificationCreate/" class="btn btn-success">Bildirim Ekle</a></td>
                     </div>
                 </div>
             </div>

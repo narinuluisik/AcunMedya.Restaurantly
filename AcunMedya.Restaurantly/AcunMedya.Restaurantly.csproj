@@ -139,6 +139,7 @@
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
@@ -5745,6 +5746,9 @@
     <Content Include="Views\Chef\ChefEdit.cshtml" />
     <Content Include="Template\quixlab-master\images\logo2.webp" />
     <Content Include="Views\Profile\ChangePassword.cshtml" />
+    <Content Include="Views\Notification\NotificationList.cshtml" />
+    <Content Include="Views\Notification\NotificationCreate.cshtml" />
+    <Content Include="Views\Notification\NotificationEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
