@@ -40,6 +40,9 @@
 ### Etkinlikler
 ![Ekran görüntüsü 2025-02-26 231336](https://github.com/user-attachments/assets/6f99f7c7-cc48-4027-b1e4-c0de725a6bfa)
 
+### Şefler
+![image](https://github.com/user-attachments/assets/bdddc0cc-9f19-420c-918b-f7f0b7452d66)
+
 ### Rezervasyon
 ![Ekran görüntüsü 2025-02-26 231352](https://github.com/user-attachments/assets/51f3520d-6b00-4165-b4c3-74c8a9dd18c2)
 
