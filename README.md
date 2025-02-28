@@ -48,37 +48,37 @@
 ![Ekran görüntüsü 2025-02-26 231515](https://github.com/user-attachments/assets/04912fd5-bd02-44cc-ae80-120b298e9bd0)
 
 ### Admin Ana Sayfası
-![image](https://github.com/user-attachments/assets/b1187e29-a621-4fc2-8130-359277d2d0d2)
+![image](https://github.com/user-attachments/assets/df6a19a9-067b-4d18-8e11-3e8b29ad250e)
 
 ### Profilim
-![Ekran görüntüsü 2025-02-26 231718](https://github.com/user-attachments/assets/cc282f51-17c1-4879-8761-e256ad377a33)
+![image](https://github.com/user-attachments/assets/6f3aec6a-c6b7-4ef5-9bcd-9daae0c9863f)
 
 ### Kategoriler
-![Ekran görüntüsü 2025-02-26 232230](https://github.com/user-attachments/assets/861844e0-5562-4713-8b1b-256a5a24bccf)
+![image](https://github.com/user-attachments/assets/5f8967eb-d4eb-4bba-880b-cd9b7109ad6e)
 
 ### İstatistikler
-![Ekran görüntüsü 2025-02-26 232450](https://github.com/user-attachments/assets/4f3838f4-2cad-48b8-b4f8-4715aeb682a9)
+![image](https://github.com/user-attachments/assets/1476a4dd-6758-477f-9f89-9297ecdfabed)
 
 ### Şefler
-![image](https://github.com/user-attachments/assets/1db8af64-ef29-402e-9897-48eaddd8d804)
+![image](https://github.com/user-attachments/assets/5fab3d3c-d29f-4af2-8d43-9bb0d30622db)
 
 ### Ürünlerimiz
-![Ekran görüntüsü 2025-02-26 232514](https://github.com/user-attachments/assets/74f6d31b-e08f-4773-a109-a6b69aa13cb3)
+![Ekran görüntüsü 2025-02-26 232514](https://github.com/user-attachments/assets/74f6d31b-e08f-4773-a109-a6b69aa13cb3)![image](https://github.com/user-attachments/assets/a5ebfc3d-9fff-467c-aa27-01462200acf1)
 
 ### Rezervasyonlar
-![Ekran görüntüsü 2025-02-26 232605](https://github.com/user-attachments/assets/20efadfb-92d0-4014-802d-7e9588101e65)
+![image](https://github.com/user-attachments/assets/f05482b6-7655-4fe5-a226-dc9899a7213e)
 
 ### Hizmetler
-![Ekran görüntüsü 2025-02-26 232551](https://github.com/user-attachments/assets/67b547c9-b9ee-4521-872d-88d4a06cf738)
+![image](https://github.com/user-attachments/assets/47f23e8c-ceee-4ccd-8db3-847c5a3e596d)
 
 ### Galeri 
 ![Ekran görüntüsü 2025-02-26 232837](https://github.com/user-attachments/assets/eca4ff07-32e1-4643-bfbc-acce45d3d9bb)
 
 ### Mesajlar
-![Ekran görüntüsü 2025-02-26 232900](https://github.com/user-attachments/assets/07607039-907b-42f4-b724-dd470a8c94fe)
+![image](https://github.com/user-attachments/assets/c9995723-639f-417d-a0c9-81193b7b7cdc)
 
 ### Referanslar
-![Ekran görüntüsü 2025-02-26 232849](https://github.com/user-attachments/assets/44e30cf1-1c5c-42e0-adf4-d17033ae0af9)
+![image](https://github.com/user-attachments/assets/6cbd9714-f7cd-4761-97ac-f5b34d64f783)
 
 ### Giriş Ekranı
 ![Ekran görüntüsü 2025-02-26 231641](https://github.com/user-attachments/assets/f1b0d832-ab8a-4fe1-a02e-2ac2568904e3)
