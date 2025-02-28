@@ -1,6 +1,6 @@
 # Restaurantly
 
-- Bu projede, kullanıcıların restoranın menüsüne göz atabileceği, sipariş verebileceği, etkinliklere katılabileceği ve rezervasyon yapabileceği bir Restoran Web Sitesi oluşturulmuştur. Ayrıca, restoran yöneticileri, admin paneli üzerinden Menüler, Etkinlikler, Hizmetler ve Spesiyaller gibi öğeleri yönetebilecektir. bunuda
+- Bu projede, kullanıcıların restoran menüsünü inceleyebileceği, sunulan hizmetleri ve etkinlikleri görüntüleyebileceği ve rezervasyon yapabileceği bir restoran web sitesi oluşturulmuştur. Ayrıca, restoran yöneticileri admin paneli üzerinden menü, etkinlikler, hizmetler ve spesiyaller gibi içerikleri yönetebilecektir.
 
 ## Özellikler
 
@@ -13,7 +13,9 @@
 ## Teknolojiler
 
 - **C#**
-- **ASP.NET Framework**
+- **ASP.NET MVC**
+- **Linq Sorgular**
+- **Bootstrap**
 - **SQL Server** (Code First Yaklaşım)
 - **Session & Cookie Yönetimi**
 - **Yetkilendirme ve Kimlik Doğrulama**
